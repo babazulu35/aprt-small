@@ -24,7 +24,7 @@
             closeIcon: 'c-overlay--close', // Overlay Close Buton Class
             animation: 'fadeIn', // Animation Css class,
             closeOnOutsideClick: true, // Close Overlay on Click outside screen
-            bindClickToParent: true, // Binds Overlay Open function to Parent Div 
+
         }
     };
 
@@ -91,8 +91,8 @@
      * @description 
      */
     Imagelay.prototype.bindOverlayToDOM = function() {
-
-        var template = "<div class='" + this.config.mainClass + " fadeIn' ><div class='" + this.config.contentClass + "'><span class='" + this.config.closeIcon + "'></span><img src='" + this.$element.attr('src') + "' /></div></div>";
+        console.log(this.$element[0].children[0].outerHTML);
+        var template = "<div class='" + this.config.mainClass + " fadeIn' ><div class='" + this.config.contentClass + "'><span class='" + this.config.closeIcon + "'></span>'" + this.$element[0].children[0].outerHTML + "'</div></div>";
         return template;
 
     }
@@ -103,7 +103,9 @@
      */
     Imagelay.prototype.ready = function() {
         var self = this;
+
         if (this.attrTag != undefined || this.attrTag != null) {
+            console.log(this.$element[0].offsetParent.className);
             if (this.config.bindClickToParent) {
                 $('.' + this.$element[0].offsetParent.className).on('click', function() {
                     self.toggle();

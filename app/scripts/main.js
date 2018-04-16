@@ -2,13 +2,12 @@
 
     // Single image overlay 
     // Shows only data-imagelay
-    $('img').imagelay({
+    $('.c-text-image__image').imagelay({
         mainClass: 'c-overlay',
         contentClass: 'c-overlay--content',
         closeIcon: 'c-overlay--close',
         animation: 'fadeIn',
-        closeOnOutsideClick: true,
-        bindClickToParent: true,
+        closeOnOutsideClick: true
     });
 
     $('.c-slider').aprtslider({
