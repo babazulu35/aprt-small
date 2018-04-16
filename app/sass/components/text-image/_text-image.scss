@@ -1,0 +1,74 @@
+.c-text-image {
+    &:nth-child(even) {
+        background: inherit;
+    }
+    &:nth-child(odd) {
+        background: $gallery;
+    }
+    &--left,
+    &--right {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+    }
+    .c-text-image__image,
+    .c-text-image__text {
+        flex: 0 50%;
+        align-self: flex-start;
+        img {
+            width: 100%;
+        }
+    }
+    .c-text-image__image {
+        position: relative;
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            bottom: 3px;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.3);
+            background-image: url("../images/zoom-icon.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            //background-size: 50%;
+            padding: 20px;
+            width: 10px;
+            height: 10px;
+            transition: all 0.3s ease-in;
+        }
+        &:hover {
+            cursor: pointer;
+            &:after,
+            &:before {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                transition: all 0.3s ease-out;
+                background-size: inherit;
+                background-image: url("../images/zoom-icon-hover.png");
+            }
+        }
+    }
+    &--left {
+        padding: 40px;
+        background-color: inherit;
+        .c-text-image__image {
+            order: 1;
+        }
+        .c-text-image__text {
+            order: 2;
+            padding-left: 40px;
+        }
+    }
+    &--right {
+        .c-text-image__image {
+            order: 2;
+        }
+        .c-text-image__text {
+            order: 1;
+            padding-right: 40px;
+        }
+    }
+}

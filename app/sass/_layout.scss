@@ -1,0 +1,10 @@
+.container {
+    width: $max-page-size;
+    margin: auto;
+    background-color: $alabaster;
+    padding-bottom: 40px;
+    &--title_placeholder {
+        padding: 40px;
+        padding-bottom: inherit;
+    }
+}

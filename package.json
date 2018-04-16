@@ -1,0 +1,32 @@
+{
+    "name": "aperto-small-test",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "gulp build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.3",
+        "gulp": "^3.9.1",
+        "jquery": "^3.3.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^8.2.0",
+        "browser-sync": "^2.23.6",
+        "gulp-clean": "^0.4.0",
+        "gulp-clean-css": "^3.9.3",
+        "gulp-concat": "^2.6.1",
+        "gulp-image": "^4.3.0",
+        "gulp-postcss": "^7.0.1",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^4.0.1",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-uglify-es": "^1.0.1",
+        "run-sequence": "^2.2.1"
+    }
+}

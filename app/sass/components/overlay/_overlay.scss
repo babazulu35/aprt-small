@@ -1,0 +1,65 @@
+.c-overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: $z-index-overlay;
+    &--content {
+        border: 10px solid $solid-white;
+        border-radius: 10px;
+        background-color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 60vw;
+        transform: translate(-50%, -50%);
+        img {
+            width: 100%;
+        }
+    }
+    &--close {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        background: inherit;
+        float: right;
+        margin-bottom: 10px;
+        transition: all .2s ease-in-out;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            &:before,
+            &:after {
+                background: $yellowgreen;
+            }
+        }
+        &:after {
+            content: "";
+            width: 5px;
+            height: 20px;
+            transform: rotate(45deg);
+            background: $mineshaft;
+            position: absolute;
+            left: 7px;
+            border-radius: 8px;
+        }
+        &:before {
+            content: "";
+            width: 5px;
+            height: 20px;
+            transform: rotate(-45deg);
+            background: $mineshaft;
+            position: absolute;
+            left: 7px;
+            border-radius: 8px;
+        }
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}

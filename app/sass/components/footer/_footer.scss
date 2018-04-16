@@ -1,0 +1,31 @@
+.c-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-page-size;
+    width: 100%;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__copy {
+        flex: 1;
+        color: $yellowgreen;
+        font-size: 0.7em;
+    }
+    &__menu {
+        ul {
+            li {
+                margin-left: 20px;
+                position: relative;
+                font-size: 0.7em;
+                color: $solid-white;
+                &:first-child:not(:last-child) {
+                    margin-left: 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                    color: $yellowgreen;
+                }
+            }
+        }
+    }
+}
