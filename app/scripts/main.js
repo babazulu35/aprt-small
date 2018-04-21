@@ -11,18 +11,16 @@
     });
 
     $('.c-slider').aprtslider({
+        showArrow: true,
         prevArrow: '<span class="c-slider__arrow-previous"></span>',
         nextArrow: '<span class="c-slider__arrow-next"></span>',
         dots: true,
         dotsClass: '<div class="c-slider__dots"></div>',
+        dotsItemClass: 'c-slider__dots-item',
         imageSliderClass: 'c-slider--item',
         autoSlide: true,
         slideSpeed: 2000,
-    });
 
-
-
-
-
+    })
 
 })();
