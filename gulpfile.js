@@ -39,9 +39,8 @@ gulp.task('html', function() {
 })
 
 gulp.task('image', function() {
-    gulp.src(config.dist.path + config.dist.imagesPath + '**/*')
-        .pipe(clean({ read: false, force: true }))
     gulp.src(config.source.imagesPath + '**/*')
+        .pipe(image({ zopflipng: false, optipng: true }))
         .pipe(gulp.dest(config.dist.path + config.dist.imagesPath));
 })
 
@@ -66,6 +65,7 @@ gulp.task('vendor-js', function() {
 gulp.task('bundle-js', function() {
     return gulp.src(config.source.bundleScripts)
         .pipe(concat(config.dist.bundleJsName))
+        .pipe(uglify())
         .pipe(gulp.dest(config.dist.path + config.dist.jsPath))
         .pipe(browserSync.stream({ match: '**/*.js' }));
 

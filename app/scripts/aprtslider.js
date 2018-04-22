@@ -14,7 +14,6 @@
 
 
     var Aprtslider = function(element, options) {
-        this.self = window.self;
         this.element = element;
         this.$element = $(element);
         this.options = options;
